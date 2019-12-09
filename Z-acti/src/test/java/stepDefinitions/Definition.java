@@ -34,6 +34,7 @@ public class Definition {
 	public void i_should_be_able_to_login_to_the_app_successfully() throws InterruptedException {
 		boolean img= driver.findElement(By.xpath("//div/img[@src='/img/default/top_nav/default-logo.png?hash=274618146']")).isDisplayed();
 		Assert.assertTrue(img);
+		driver.findElement(By.id("logoutLink")).click();
 		Thread.sleep(3000);
 		driver.quit();
 	}
